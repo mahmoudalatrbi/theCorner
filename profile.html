@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- icons css -->
+    <link href="css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/profile.css">
+    
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>Profile</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">The<span>C</span>orner</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#allproducts">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+                <div class="d-flex">
+                    <a id="cartLink" href="cart.html">
+                        <button class="btn btn-outline-dark">
+                            <i class="fas fa-shopping-cart me-1"></i>
+
+                            Cart
+                            <span id="cart-count" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </a>
+                </div>
+                <div class="nav__btns px-4">
+                    <div class="dropdown-center">
+                        <button class="border-0 rounded-circle p-0" type="button" id="dropdownBtn">
+                            <img src="imgs/profile.jpg" class="myimage profImg img-fluid rounded-circle" alt="">
+                        </button>
+                        <ul class="dropdown px-4 rounded" id="dropdown">
+                            <li class="dropProf d-flex py-3 align-items-center ">
+                                <img src="imgs/profile.jpg" class="myimage profimage img-fluid rounded-circle" alt="">
+                                <h2 class="username text-muted px-3 my-1" id="userName"> User Name</h2>
+                            </li>
+        
+                            <li class="my-2 items rounded">
+                                <a class="dropdown-item d-flex justify-content-around align-items-center py-1"
+                                    href="profile.html">
+                                    <div class="icon py-1 px-2 text-center rounded-circle">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <span class="px-4">Edite</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="my-2 items rounded">
+                                <a class="dropdown-item d-flex justify-content-around align-items-center py-1" href="#">
+                                    <div class="icon py-1 px-2 text-center rounded-circle"">
+                                        <i class=" fas fa-cog"></i>
+                                    </div>
+                                    <span class="px-4">Setting</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="my-2 items rounded">
+                                <a class="dropdown-item d-flex justify-content-around align-items-center py-1" href="#">
+                                    <div class="icon py-1 px-2 text-center rounded-circle"">
+                                        <i class=" fas fa-question-circle "></i>
+                                    </div>
+                                    <span class=" px-4">Help</span>
+                                        <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                            <li class="my-2 items rounded">
+                                <a class="dropdown-item d-flex justify-content-around align-items-center py-1" href="#">
+                                    <div class="icon py-1 px-2 text-center rounded-circle">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </div>
+                                    <span class="px-4">logout</span>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profileSection py-4">
+        <div class="container rounded my-0 px-3 ">
+            <div class="mx-3">
+                <!-- Larger Profile Picture -->
+                <div class="row d-flex align-items-center py-5">
+                    <div class="col-md-8 col-12 text-center text-md-start">
+                        <h1 class="edit-profile-title text-white" >Edit Profile</h1>
+                    </div>
+                    <div class="col-md-4 col-12 text-center p-0 profileImage">
+                        <img src="imgs/profile.jpg" class="myimage rounded-circle" alt="Profile" id="largeProfileImage">
+                        <div class="camera text-white px-2 py-1 rounded-circle" id="cameraIcon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <input type="file" id="fileInput" class="d-none" accept="image/*">
+                    </div>
+                </div>
+
+                <!-- Form Fields -->
+                <form id="profileForm" class="text-center text-md-start">
+                    <div class="row justify-content-around py-2">
+                        <!-- First Name -->
+                        <div
+                            class="form-group col-md-6 col-12 d-flex flex-column flex-md-row mb-3">
+                            <label for="firstName" class="col-md-4 col-form-label">First Name</label>
+                            <div class="col-md-7">
+                                <input type="text" name="Firstname" class="form-control shadow-none" id="firstName"
+                                    placeholder="Mahmoud">
+                            </div>
+                        </div>
+
+                        <!-- Last Name -->
+                        <div
+                            class="form-group col-md-6 col-12 d-flex flex-column flex-md-row mb-3">
+                            <label for="lastName" class="col-md-4 col-form-label">Last Name</label>
+                            <div class="col-md-7">
+                                <input type="text" name="Lastname" class="form-control shadow-none" id="lastName" placeholder="elatrbi">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around py-2">
+                        <!-- Email -->
+                        <div
+                            class="form-group col-md-6 col-12 d-flex flex-column flex-md-row mb-3">
+                            <label for="email" class="col-md-4 col-form-label">Email</label>
+                            <div class="col-md-7">
+                                <input type="email" class="form-control shadow-none" id="email" name="email"
+                                    placeholder="Me@gmail.com">
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div
+                            class="form-group col-md-6 col-12 d-flex flex-column flex-md-row mb-3">
+                            <label for="address" class="col-md-4 col-form-label">Address</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control shadow-none" id="address" name="Address" placeholder="mokattam">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-around py-2">
+                        <!-- Contact Number -->
+                        <div
+                            class="form-group col-md-6 col-12 d-flex flex-column flex-md-row  mb-3">
+                            <label for="contact" class="col-md-4 col-form-label">Contact Number</label>
+                            <div class="col-md-7">
+                                <input type="text" name="ContactNumber" class="form-control shadow-none" id="contact"
+                                    placeholder="010*****571">
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div
+                            class="form-group col-md-6 col-12 d-flex flex-column flex-md-row mb-3">
+                            <label for="password" class="col-md-4 col-form-label">Password</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control shadow-none" id="password" value="13024120">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div
+                        class="form-group d-flex flex-column flex-md-row justify-content-start py-3">
+                        <button type="clear" class="cancleBtn py-2 px-3 rounded mb-2 mb-md-0">Cancel</button>
+                        <button type="submit" class="saveBtn py-2 px-3 mx-md-3 rounded" id="updateButton">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container m-auto">
+            <div class="row row-cols-md-4">
+                <div class="footer col px-3">
+                    <div class="footerTitle">
+                        <h4>company</h4>
+                        <span></span>
+                    </div>
+                    <ul class="px-0">
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer col px-3">
+                    <div class="footerTitle">
+                        <h4>get help</h4>
+                        <span></span>
+                    </div>
+                    <ul class="px-0">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer col px-3">
+                    <div class="footerTitle">
+                        <h4>online shop</h4>
+                        <span></span>
+                    </div>
+                    <ul class="px-0">
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">acsesores</a></li>
+                        <li><a href="#">T-shert</a></li>
+                    </ul>
+                </div>
+                <div class="footer col px-3">
+                    <div class="footerTitle">
+                        <h4>follow us</h4>
+                        <span></span>
+                    </div>
+                    <div class="social-links row text-center">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="row">
+                        <a class="navbar-brand2 text-white" href="index.html">The<span>C</span>orner</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/authenication.js"></script>
+    <script src="js/profilemanage.js"></script>
+    <script src="js/about.js"></script>
+
+</body>
+
+</html>

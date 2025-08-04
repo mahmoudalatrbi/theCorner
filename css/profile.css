@@ -1,0 +1,87 @@
+/* profile page */
+
+/* Style for the profile image */
+
+.profileSection {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    /* linear-gradient(to bottom, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%) */
+}
+
+.profileSection .container {
+    width: fit-content;
+    margin-top: 3%;
+    background-color: #000000af;
+
+}
+
+.profileImage {
+    width: fit-content;
+    position: relative;
+    border: 3px solid #de1311;
+    border-radius: 50%;
+}
+
+.camera {
+    background-color: #de1311;
+    width: fit-content;
+    position: absolute;
+    bottom: 0%;
+    left: 7%;
+}
+
+/* Style for the large profile image */
+#largeProfileImage {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+input.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #a1a1a1;
+}
+
+/* Edit profile title */
+
+.edit-profile-title {
+    font-size: 45px;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+label {
+    color: #fff;
+}
+
+.cancleBtn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.cancleBtn:hover {
+    background-color: #de1311;
+    border: 1px solid #de1311;
+
+    color: #fff;
+}
+
+.saveBtn {
+    background-color: #de1311;
+    border: 1px solid #de1311;
+    color: white;
+    transition: all 0.5s;
+}
+
+.saveBtn:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+
+    color: #de1311;
+}
+
